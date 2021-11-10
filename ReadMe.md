@@ -16,4 +16,4 @@ Then you can execute the analysis by running the following code:
 make zika_report
 ```
 
-You should expect to see an html markdown file as your output titled 'Zika_Report.html', which will contain two tables.
+You should expect to see an html markdown file as your output titled 'Zika_Report.html' in the Rmd folder, which will contain two tables.
