@@ -21,7 +21,9 @@ Data was captured on 3,500 pregnant women. Maternal demographics at study entry 
 __Table 1__. Maternal Demographics at Study Entry
 
 ```{r, echo = FALSE}
-knitr::include_graphics(here::here("Output", "maternal_table.png"))
+load(here::here("Output", "maternal_table.rdata"))
+
+mat_table
 ```
 
 
@@ -33,7 +35,9 @@ Various infant outcomes were assessed by Zika exposure status, including stillbi
 __Table 2__. Infant Characteristics at Birth
 
 ```{r, echo = FALSE}
-knitr::include_graphics(here::here("Output", "infant_table.png"))
+load(here::here("Output", "infant_table.rdata"))
+
+inf_table
 ```
 
 $~$ <!--This adds space between header and next section--> 

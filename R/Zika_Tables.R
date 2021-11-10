@@ -4,7 +4,6 @@ here::i_am("R/Zika_Tables.R")
 if (!require("sas7bdat")) install.packages("sas7bdat")
 if (!require("dplyr")) install.packages("dplyr")
 if (!require("table1")) install.packages("table1")
-#if (!require("gtsummary")) install.packages("gtsummary")
 if (!require("ggplot2")) install.packages("ggplot2")
 
 #Load package to read SAS dataset into R
@@ -13,11 +12,10 @@ library("sas7bdat")
 #Load packages to summarize and graph data
 library("dplyr")
 library("table1")
-#library("gtsummary")
 library("ggplot2")
 
 #Create working dataset in R
-zika_data <- read.sas7bdat("../Data/zika_simulated_data.sas7bdat")
+zika_data <- read.sas7bdat("Data/zika_simulated_data.sas7bdat")
 
 
 #Review structure of dataset by looking at the first 6 rows
@@ -96,11 +94,8 @@ label(zika_data_table1$gravidity_cat) <- "Gravidity"
 #Create table 1 - descriptive statistics of maternal characteristics at enrollment
 mat_table <- table1(~ mat_age_cat + edu_cat+ ga_entry_cat + gravidity_cat | site, data=zika_data_table1)
 
-#Convert to a printable format
-#print_table1 <- t1flex(mat_table)
-
-#Save table 1 as an image to be used in markdown file
-save(mat_table, file = here::here('Output', "maternal_table.png"))
+#Save table 1 as an r object to be used in markdown file
+save(mat_table, file = here::here('Output', "maternal_table.rdata"))
 
 
 #Look at infant data (and make sure all variable levels are 0/1)
@@ -160,9 +155,6 @@ label(zika_data_table2$audio_screen_fail) <- "Audiological Failure"
 #Create table 1 - descriptive statistics of infant characteristics
 inf_table <- table1(~ infant_micro_update + infant_sga + infant_lbw + preterm + adverse_fetal + infant_seizure + arthrogryposis + infant_congen_malform + ophtho_screen_fail + audio_screen_fail | infant_exposure, data=zika_data_table2)
 
-#Convert to a printable format
-#print_table1 <- t1flex(inf_table)
-
-#Save table 1 as an image to be used in markdown file
-save(inf_table, file = here::here('Output', "infant_table.png"))
+#Save table 1 as an r object to be used in markdown file
+save(inf_table, file = here::here('Output', "infant_table.rdata"))
 
