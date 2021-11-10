@@ -1,4 +1,4 @@
-##Directions to successfully run project code
+## Directions to successfully run project code
 
 The data used in this project were simulated from an observational Zika virus study.
 
