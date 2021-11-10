@@ -1,0 +1,42 @@
+---
+title: "Exploring Zika Infection During Pregnancy"
+author: "Elizabeth Fogleman"
+date: "Date created: `r format(Sys.Date(), '%Y-%m-%d')`"
+output: html_document
+---
+
+```{r, include = FALSE}
+here::i_am("Rmd/Zika_Report.Rmd")
+knitr::opts_knit$set(root.dir = here::here())
+```
+
+$~$ <!--This adds space between header and next section--> 
+
+The goal of this (fictional, simulated) study was to understand the association between Zika virus exposure during pregnancy and various infant outcomes.
+
+## Maternal data
+Data was captured on 3,500 pregnant women. Maternal demographics at study entry are summarized in table 1 below. A majority of women were between 20-35 years old and highest level of education obtained across all sites was predominantly primary or secondary school. Moreover, 81.5% of women were enrolled during their 1st trimester of pregnancy. Most participants had two or less prior pregnancies.
+
+
+__Table 1__. Maternal Demographics at Study Entry
+
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("Output", "maternal_table.png"))
+```
+
+
+$~$ <!--This adds space between header and next section--> 
+
+## Infant Data
+Various infant outcomes were assessed by Zika exposure status, including stillbirth or neonatal death, preterm birth, microcephaly, low birth weight, seizure, arthrogryposis, congenital malformations, and audiological and ophthalmological failures.
+
+__Table 2__. Infant Characteristics at Birth
+
+```{r, echo = FALSE}
+knitr::include_graphics(here::here("Output", "infant_table.png"))
+```
+
+$~$ <!--This adds space between header and next section--> 
+
+
+
