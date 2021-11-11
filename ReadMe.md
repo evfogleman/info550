@@ -10,6 +10,14 @@ In order to execute the analysis, please first fork my repository within GitHub 
 git clone https://github.com/_yourusername_/peerreview
 ```
 
+Then you will need to use the renv package to load the R packages used in my report. Navigate to the repository folder, then open R in WSL. Next run renv within R using the following code:
+
+```bash
+renv::restore()
+```
+
+Then exit out of R using q().
+
 Then you can execute the analysis by running the following code:
 
 ```bash
