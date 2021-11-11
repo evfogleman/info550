@@ -7,7 +7,7 @@ All packages required to run the program successfully are found at the top of th
 In order to execute the analysis, please first fork my repository within GitHub at the following link: https://github.com/evfogleman/info550. Then open WLS and clone your own version of my repository by running the following example code:
 
 ```bash
-git clone https://github.com/_yourusername_/peerreview
+git clone https://github.com/_yourusername_/info550
 ```
 
 Then you will need to use the renv package to load the R packages used in my report. Navigate to the repository folder, then open R in WSL. Next run renv within R using the following code:
