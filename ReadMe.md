@@ -2,26 +2,23 @@
 
 The data used in this project were simulated from an observational Zika virus study.
 
-All packages required to run the program successfully are found at the top of the R script, but do not need to installed by you separately. They will install once you execute the analysis if not already installed. R packages include sas7bdat, dplyr, table1 and ggplot2.
+All packages required to run the program successfully are found within the docker container, and do not need to installed by you separately. They will install once you execute the analysis. R packages include sas7bdat, dplyr, table1 and ggplot2. _Please note, you will not need to fork anything from GitHub._
 
-In order to execute the analysis, please first fork my repository within GitHub at the following link: https://github.com/evfogleman/info550. Then open WLS and clone your own version of my repository by running the following example code:
-
-```bash
-git clone https://github.com/_yourusername_/info550
-```
-
-Then you will need to use the renv package to load the R packages used in my report. Navigate to the repository folder, then open R in WSL. Next run renv within R using the following code:
+In order to execute the analysis, first navigate to a local directory empty folder of your choosing (ensure there are no other Dockerfiles or renv files) within wsl. Then you will need to pull my docker image by running the following code (being sure to use the V6 tag):
 
 ```bash
-renv::restore()
+docker pull evfogleman/info550_project:V6
 ```
-
-Then exit out of R using q().
-
-Then you can execute the analysis by running the following code:
+Then create a folder titled 'Output' in your local directory using the following code:
 
 ```bash
-make zika_report
+mkdir Output
 ```
+Next, excute the following code to compile the analysis and output:
 
-You should expect to see an html markdown file as your output titled 'Zika_Report.html' in the Rmd folder, which will contain two tables.
+```bash
+docker run -v /_local_path_/Output:/project/Output evfogleman/info550_project:V6
+```
+# Please include your full absolute path (instead of relative path ~/Output) since only the full path will mount correctly.
+
+You should expect to see an html markdown file as your output titled 'Zika_Report.html' in the Output folder, which will contain two tables.
