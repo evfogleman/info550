@@ -2,7 +2,7 @@
 
 The data used in this project were simulated from an observational Zika virus study.
 
-All packages required to run the program successfully are found within the docker container, and do not need to installed by you separately. They will install once you execute the analysis. R packages include sas7bdat, dplyr, table1 and ggplot2. _Please note, you will not need to fork anything from GitHub._
+All packages required to run the program successfully are found within the docker container, and do not need to be installed by you separately. They will install once you execute the analysis. R packages include sas7bdat, dplyr, table1 and ggplot2. _Please note, you will not need to fork anything from GitHub._
 
 In order to execute the analysis, first navigate to a local directory empty folder of your choosing (ensure there are no other Dockerfiles or renv files) within wsl. Then you will need to pull my docker image by running the following code (being sure to use the V6 tag):
 
