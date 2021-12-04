@@ -14,11 +14,11 @@ Then create a folder titled 'Output' in your local directory using the following
 ```bash
 mkdir Output
 ```
-Next, excute the following code to compile the analysis and output:
+Next, execute the following code to compile the analysis and output:
 
 ```bash
 docker run -v /_local_path_/Output:/project/Output evfogleman/info550_project:V6
 ```
-# Please include your full absolute path (instead of relative path ~/Output) since only the full path will mount correctly.
+*Please include your full absolute path (instead of relative path ~/Output) since only the full path will mount correctly.*
 
 You should expect to see an html markdown file as your output titled 'Zika_Report.html' in the Output folder, which will contain two tables.
