@@ -15,12 +15,5 @@ COPY ./ /project/
 # Set the working directory
 WORKDIR /project
 
-# Run the script to deactivate the renv file used in the prior HW
-RUN Rscript -e "renv::deactivate()"
-
-# make R scripts executable
-#RUN chmod +x /project/R/*.R
-
 # Set entry point (make container entry point bash)
-#CMD make zika_report
-CMD /bin/bash
+CMD make zika_report
